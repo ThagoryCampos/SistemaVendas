@@ -136,6 +136,7 @@ com\mycompany\visao\pais\CadPais$3.class
 com\mycompany\visao\estado\CadEstado$3.class
 com\mycompany\visao\cidade\ListCidade$5.class
 com\mycompany\visao\estado\ListEstado$2.class
+com\mycompany\visao\pedido\ListPedido$3.class
 com\mycompany\visao\outros\corporativo\MenuPrincipal$14.class
 com\mycompany\visao\cidade\CadCidade$7.class
 com\mycompany\visao\endereco\CadEndereco$2.class

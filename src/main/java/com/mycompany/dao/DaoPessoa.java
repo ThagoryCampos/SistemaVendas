@@ -14,17 +14,17 @@ import java.sql.ResultSet;
 public class DaoPessoa extends BancoDeDadosMySql{
     String sql;
     
-    public Boolean inserir(int id, int idEndereco, int idEstadoCivil, String nome, String sobrenome, String genero, String telefone, String email){
+    public Boolean inserir(int id, String nome, String sobrenome, int idEndereco, int idEstadoCivil, String genero, String telefone, String email){
         try{
-            sql = "INSERT INTO PESSOA (ID, ID_ENDERECO, ID_ESTADO_CIVIL, NOME, SOBRENOME, GENERO, TELEFONE, EMAIL) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+            sql = "INSERT INTO PESSOA (ID, NOME, SOBRENOME, ID_ENDERECO, ID_ESTADO_CIVIL, GENERO, TELEFONE, EMAIL) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
             
             setStatement(getConexao().prepareStatement(sql));
             
             getStatement().setInt(1, id);
-            getStatement().setInt(2, idEndereco);
-            getStatement().setInt(3, idEstadoCivil);
-            getStatement().setString(4, nome);
-            getStatement().setString(5, sobrenome);
+            getStatement().setString(2, nome);
+            getStatement().setString(3, sobrenome);
+            getStatement().setInt(4, idEndereco);
+            getStatement().setInt(5, idEstadoCivil);
             getStatement().setString(6, genero);
             getStatement().setString(7, telefone);
             getStatement().setString(8, email);
@@ -38,20 +38,20 @@ public class DaoPessoa extends BancoDeDadosMySql{
         }
     }
     
-    public Boolean alterar(int id, int idEndereco, int idEstadoCivil, String nome, String sobrenome, String genero, String telefone, String email){
+    public Boolean alterar(int id, String nome, String sobrenome, int idEndereco, int idEstadoCivil, String genero, String telefone, String email){
         try{
-            sql = "UPDATE PESSOA SET ID_ENDERECO = ?, ID_ESTADO_CIVIL = ?, NOME = ?, SOBRENOME = ?, GENERO = ?, TELEFONE = ?, EMAIL = ? WHERE ID = ?";
+            sql = "UPDATE PESSOA SET  NOME = ?, SOBRENOME = ?, ID_ENDERECO = ?, ID_ESTADO_CIVIL = ?, GENERO = ?, TELEFONE = ?, EMAIL = ? WHERE ID = ?";
             
             setStatement(getConexao().prepareStatement(sql));
             
-            getStatement().setInt(8, id);
-            getStatement().setInt(1, idEndereco);
-            getStatement().setInt(2, idEstadoCivil);
-            getStatement().setString(3, nome);
-            getStatement().setString(4, sobrenome);
-            getStatement().setString(5, genero);
-            getStatement().setString(6, telefone);
-            getStatement().setString(7, email);
+            getStatement().setInt(1, id);
+            getStatement().setString(2, nome);
+            getStatement().setString(3, sobrenome);
+            getStatement().setInt(4, idEndereco);
+            getStatement().setInt(5, idEstadoCivil);
+            getStatement().setString(6, genero);
+            getStatement().setString(7, telefone);
+            getStatement().setString(8, email);
             
             getStatement().executeUpdate();
             
@@ -84,12 +84,12 @@ public class DaoPessoa extends BancoDeDadosMySql{
             sql = 
                 " SELECT                            " +
                 "   P.ID AS ID,                     " +
+                "   P.NOME AS NOME,                 " +
+                "   P.SOBRENOME AS SOBRENOME,       " +
                 "   C.NOME AS CIDADE,               " +
                 "   E.NOME_RUA AS RUA,              " +
                 "   E.CEP AS CEP,                   " +
                 "   E.NUMERO_RESIDENCIA AS NUM_RES, " +
-                "   P.NOME AS NOME,                 " +
-                "   P.SOBRENOME AS SOBRENOME,       " +
                 "   P.GENERO AS GENERO,             " +
                 "   P.TELEFONE AS TELEFONE,         " +
                 "   P.EMAIL AS EMAIL,               " +
@@ -118,12 +118,12 @@ public class DaoPessoa extends BancoDeDadosMySql{
             sql = 
                 " SELECT                            " +
                 "   P.ID AS ID,                     " +
+                "   P.NOME AS NOME,                 " +
+                "   P.SOBRENOME AS SOBRENOME,       " +
                 "   C.NOME AS CIDADE,               " +
                 "   E.NOME_RUA AS RUA,              " +
                 "   E.CEP AS CEP,                   " +
                 "   E.NUMERO_RESIDENCIA AS NUM_RES, " +
-                "   P.NOME AS NOME,                 " +
-                "   P.SOBRENOME AS SOBRENOME,       " +
                 "   P.GENERO AS GENERO,             " +
                 "   P.TELEFONE AS TELEFONE,         " +
                 "   P.EMAIL AS EMAIL,               " +
@@ -155,13 +155,13 @@ public class DaoPessoa extends BancoDeDadosMySql{
         try{
             sql = 
                 " SELECT                            " +
-                "   P.ID AS ID,                     " +
+                 "   P.ID AS ID,                     " +
+                "   P.NOME AS NOME,                 " +
+                "   P.SOBRENOME AS SOBRENOME,       " +
                 "   C.NOME AS CIDADE,               " +
                 "   E.NOME_RUA AS RUA,              " +
                 "   E.CEP AS CEP,                   " +
                 "   E.NUMERO_RESIDENCIA AS NUM_RES, " +
-                "   P.NOME AS NOME,                 " +
-                "   P.SOBRENOME AS SOBRENOME,       " +
                 "   P.GENERO AS GENERO,             " +
                 "   P.TELEFONE AS TELEFONE,         " +
                 "   P.EMAIL AS EMAIL,               " +
@@ -192,13 +192,13 @@ public class DaoPessoa extends BancoDeDadosMySql{
         try{
             sql = 
                 " SELECT                            " +
-                "   P.ID AS ID,                     " +
+                 "   P.ID AS ID,                     " +
+                "   P.NOME AS NOME,                 " +
+                "   P.SOBRENOME AS SOBRENOME,       " +
                 "   C.NOME AS CIDADE,               " +
                 "   E.NOME_RUA AS RUA,              " +
                 "   E.CEP AS CEP,                   " +
                 "   E.NUMERO_RESIDENCIA AS NUM_RES, " +
-                "   P.NOME AS NOME,                 " +
-                "   P.SOBRENOME AS SOBRENOME,       " +
                 "   P.GENERO AS GENERO,             " +
                 "   P.TELEFONE AS TELEFONE,         " +
                 "   P.EMAIL AS EMAIL,               " +
@@ -229,13 +229,13 @@ public class DaoPessoa extends BancoDeDadosMySql{
         try{
             sql = 
                 " SELECT                            " +
-                "   P.ID AS ID,                     " +
+                 "   P.ID AS ID,                     " +
+                "   P.NOME AS NOME,                 " +
+                "   P.SOBRENOME AS SOBRENOME,       " +
                 "   C.NOME AS CIDADE,               " +
                 "   E.NOME_RUA AS RUA,              " +
                 "   E.CEP AS CEP,                   " +
                 "   E.NUMERO_RESIDENCIA AS NUM_RES, " +
-                "   P.NOME AS NOME,                 " +
-                "   P.SOBRENOME AS SOBRENOME,       " +
                 "   P.GENERO AS GENERO,             " +
                 "   P.TELEFONE AS TELEFONE,         " +
                 "   P.EMAIL AS EMAIL,               " +
@@ -266,13 +266,13 @@ public class DaoPessoa extends BancoDeDadosMySql{
         try{
             sql = 
                 " SELECT                            " +
-                "   P.ID AS ID,                     " +
+                 "   P.ID AS ID,                     " +
+                "   P.NOME AS NOME,                 " +
+                "   P.SOBRENOME AS SOBRENOME,       " +
                 "   C.NOME AS CIDADE,               " +
                 "   E.NOME_RUA AS RUA,              " +
                 "   E.CEP AS CEP,                   " +
                 "   E.NUMERO_RESIDENCIA AS NUM_RES, " +
-                "   P.NOME AS NOME,                 " +
-                "   P.SOBRENOME AS SOBRENOME,       " +
                 "   P.GENERO AS GENERO,             " +
                 "   P.TELEFONE AS TELEFONE,         " +
                 "   P.EMAIL AS EMAIL,               " +
@@ -303,13 +303,13 @@ public class DaoPessoa extends BancoDeDadosMySql{
         try{
             sql = 
                 " SELECT                            " +
-                "   P.ID AS ID,                     " +
+                 "   P.ID AS ID,                     " +
+                "   P.NOME AS NOME,                 " +
+                "   P.SOBRENOME AS SOBRENOME,       " +
                 "   C.NOME AS CIDADE,               " +
                 "   E.NOME_RUA AS RUA,              " +
                 "   E.CEP AS CEP,                   " +
                 "   E.NUMERO_RESIDENCIA AS NUM_RES, " +
-                "   P.NOME AS NOME,                 " +
-                "   P.SOBRENOME AS SOBRENOME,       " +
                 "   P.GENERO AS GENERO,             " +
                 "   P.TELEFONE AS TELEFONE,         " +
                 "   P.EMAIL AS EMAIL,               " +
@@ -341,12 +341,12 @@ public class DaoPessoa extends BancoDeDadosMySql{
             sql = 
                 " SELECT                            " +
                 "   P.ID AS ID,                     " +
+                "   P.NOME AS NOME,                 " +
+                "   P.SOBRENOME AS SOBRENOME,       " +
                 "   C.NOME AS CIDADE,               " +
                 "   E.NOME_RUA AS RUA,              " +
                 "   E.CEP AS CEP,                   " +
                 "   E.NUMERO_RESIDENCIA AS NUM_RES, " +
-                "   P.NOME AS NOME,                 " +
-                "   P.SOBRENOME AS SOBRENOME,       " +
                 "   P.GENERO AS GENERO,             " +
                 "   P.TELEFONE AS TELEFONE,         " +
                 "   P.EMAIL AS EMAIL,               " +
@@ -377,13 +377,13 @@ public class DaoPessoa extends BancoDeDadosMySql{
         try{
             sql = 
                 " SELECT                            " +
-                "   P.ID AS ID,                     " +
+                 "   P.ID AS ID,                     " +
+                "   P.NOME AS NOME,                 " +
+                "   P.SOBRENOME AS SOBRENOME,       " +
                 "   C.NOME AS CIDADE,               " +
                 "   E.NOME_RUA AS RUA,              " +
                 "   E.CEP AS CEP,                   " +
                 "   E.NUMERO_RESIDENCIA AS NUM_RES, " +
-                "   P.NOME AS NOME,                 " +
-                "   P.SOBRENOME AS SOBRENOME,       " +
                 "   P.GENERO AS GENERO,             " +
                 "   P.TELEFONE AS TELEFONE,         " +
                 "   P.EMAIL AS EMAIL,               " +
@@ -414,13 +414,13 @@ public class DaoPessoa extends BancoDeDadosMySql{
         try{
             sql = 
                 " SELECT                            " +
-                "   P.ID AS ID,                     " +
+                 "   P.ID AS ID,                     " +
+                "   P.NOME AS NOME,                 " +
+                "   P.SOBRENOME AS SOBRENOME,       " +
                 "   C.NOME AS CIDADE,               " +
                 "   E.NOME_RUA AS RUA,              " +
                 "   E.CEP AS CEP,                   " +
                 "   E.NUMERO_RESIDENCIA AS NUM_RES, " +
-                "   P.NOME AS NOME,                 " +
-                "   P.SOBRENOME AS SOBRENOME,       " +
                 "   P.GENERO AS GENERO,             " +
                 "   P.TELEFONE AS TELEFONE,         " +
                 "   P.EMAIL AS EMAIL,               " +
@@ -451,13 +451,13 @@ public class DaoPessoa extends BancoDeDadosMySql{
         try{
             sql = 
                 " SELECT                            " +
-                "   P.ID AS ID,                     " +
+                 "   P.ID AS ID,                     " +
+                "   P.NOME AS NOME,                 " +
+                "   P.SOBRENOME AS SOBRENOME,       " +
                 "   C.NOME AS CIDADE,               " +
                 "   E.NOME_RUA AS RUA,              " +
                 "   E.CEP AS CEP,                   " +
                 "   E.NUMERO_RESIDENCIA AS NUM_RES, " +
-                "   P.NOME AS NOME,                 " +
-                "   P.SOBRENOME AS SOBRENOME,       " +
                 "   P.GENERO AS GENERO,             " +
                 "   P.TELEFONE AS TELEFONE,         " +
                 "   P.EMAIL AS EMAIL,               " +

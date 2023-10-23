@@ -50,18 +50,18 @@ public class ListPessoa extends javax.swing.JFrame {
             defaultTableModel.setRowCount(0);
             while (resultSet.next()){
                 String id = resultSet.getString(1);
-                String cidade = resultSet.getString(2);
-                String rua = resultSet.getString(3);
-                String cep = resultSet.getString(4);
-                String numRes = resultSet.getString(5);
-                String nome = resultSet.getString(6);
-                String sobrenome = resultSet.getString(7);
+                String nome = resultSet.getString(2);
+                String sobrenome = resultSet.getString(3);
+                String cidade = resultSet.getString(4);
+                String rua = resultSet.getString(5);
+                String cep = resultSet.getString(6);
+                String numRes = resultSet.getString(7);
                 String genero = resultSet.getString(8);
                 String telefone = resultSet.getString(9);
                 String email = resultSet.getString(10);
                 String estCivil = resultSet.getString(11);
                 
-                defaultTableModel.addRow(new Object[]{id, cidade, rua, cep, numRes, nome, sobrenome, genero, telefone, email, estCivil});
+                defaultTableModel.addRow(new Object[]{id, nome, sobrenome, cidade, rua, cep, numRes, genero, telefone, email, estCivil});
             }
         }catch(Exception e){
             System.out.println(e.getMessage());
@@ -83,12 +83,12 @@ public class ListPessoa extends javax.swing.JFrame {
             defaultTableModel.setRowCount(0);
             while (resultSet.next()){
                 String id = resultSet.getString(1);
-                String cidade = resultSet.getString(2);
-                String rua = resultSet.getString(3);
-                String cep = resultSet.getString(4);
-                String numRes = resultSet.getString(5);
-                String nome = resultSet.getString(6);
-                String sobrenome = resultSet.getString(7);
+                String nome = resultSet.getString(2);
+                String sobrenome = resultSet.getString(3);
+                String cidade = resultSet.getString(4);
+                String rua = resultSet.getString(5);
+                String cep = resultSet.getString(6);
+                String numRes = resultSet.getString(7);
                 String genero = resultSet.getString(8);
                 String telefone = resultSet.getString(9);
                 String email = resultSet.getString(10);
@@ -116,12 +116,12 @@ public class ListPessoa extends javax.swing.JFrame {
             defaultTableModel.setRowCount(0);
             while (resultSet.next()){
                 String id = resultSet.getString(1);
-                String cidade = resultSet.getString(2);
-                String rua = resultSet.getString(3);
-                String cep = resultSet.getString(4);
-                String numRes = resultSet.getString(5);
-                String nome = resultSet.getString(6);
-                String sobrenome = resultSet.getString(7);
+                String nome = resultSet.getString(2);
+                String sobrenome = resultSet.getString(3);
+                String cidade = resultSet.getString(4);
+                String rua = resultSet.getString(5);
+                String cep = resultSet.getString(6);
+                String numRes = resultSet.getString(7);
                 String genero = resultSet.getString(8);
                 String telefone = resultSet.getString(9);
                 String email = resultSet.getString(10);
@@ -149,12 +149,12 @@ public class ListPessoa extends javax.swing.JFrame {
             defaultTableModel.setRowCount(0);
             while (resultSet.next()){
                 String id = resultSet.getString(1);
-                String cidade = resultSet.getString(2);
-                String rua = resultSet.getString(3);
-                String cep = resultSet.getString(4);
-                String numRes = resultSet.getString(5);
-                String nome = resultSet.getString(6);
-                String sobrenome = resultSet.getString(7);
+                String nome = resultSet.getString(2);
+                String sobrenome = resultSet.getString(3);
+                String cidade = resultSet.getString(4);
+                String rua = resultSet.getString(5);
+                String cep = resultSet.getString(6);
+                String numRes = resultSet.getString(7);
                 String genero = resultSet.getString(8);
                 String telefone = resultSet.getString(9);
                 String email = resultSet.getString(10);
@@ -182,12 +182,12 @@ public class ListPessoa extends javax.swing.JFrame {
             defaultTableModel.setRowCount(0);
             while (resultSet.next()){
                 String id = resultSet.getString(1);
-                String cidade = resultSet.getString(2);
-                String rua = resultSet.getString(3);
-                String cep = resultSet.getString(4);
-                String numRes = resultSet.getString(5);
-                String nome = resultSet.getString(6);
-                String sobrenome = resultSet.getString(7);
+                String nome = resultSet.getString(2);
+                String sobrenome = resultSet.getString(3);
+                String cidade = resultSet.getString(4);
+                String rua = resultSet.getString(5);
+                String cep = resultSet.getString(6);
+                String numRes = resultSet.getString(7);
                 String genero = resultSet.getString(8);
                 String telefone = resultSet.getString(9);
                 String email = resultSet.getString(10);
@@ -215,12 +215,12 @@ public class ListPessoa extends javax.swing.JFrame {
             defaultTableModel.setRowCount(0);
             while (resultSet.next()){
                 String id = resultSet.getString(1);
-                String cidade = resultSet.getString(2);
-                String rua = resultSet.getString(3);
-                String cep = resultSet.getString(4);
-                String numRes = resultSet.getString(5);
-                String nome = resultSet.getString(6);
-                String sobrenome = resultSet.getString(7);
+                String nome = resultSet.getString(2);
+                String sobrenome = resultSet.getString(3);
+                String cidade = resultSet.getString(4);
+                String rua = resultSet.getString(5);
+                String cep = resultSet.getString(6);
+                String numRes = resultSet.getString(7);
                 String genero = resultSet.getString(8);
                 String telefone = resultSet.getString(9);
                 String email = resultSet.getString(10);
@@ -248,12 +248,12 @@ public class ListPessoa extends javax.swing.JFrame {
             defaultTableModel.setRowCount(0);
             while (resultSet.next()){
                 String id = resultSet.getString(1);
-                String cidade = resultSet.getString(2);
-                String rua = resultSet.getString(3);
-                String cep = resultSet.getString(4);
-                String numRes = resultSet.getString(5);
-                String nome = resultSet.getString(6);
-                String sobrenome = resultSet.getString(7);
+                String nome = resultSet.getString(2);
+                String sobrenome = resultSet.getString(3);
+                String cidade = resultSet.getString(4);
+                String rua = resultSet.getString(5);
+                String cep = resultSet.getString(6);
+                String numRes = resultSet.getString(7);
                 String genero = resultSet.getString(8);
                 String telefone = resultSet.getString(9);
                 String email = resultSet.getString(10);
@@ -281,12 +281,12 @@ public class ListPessoa extends javax.swing.JFrame {
             defaultTableModel.setRowCount(0);
             while (resultSet.next()){
                 String id = resultSet.getString(1);
-                String cidade = resultSet.getString(2);
-                String rua = resultSet.getString(3);
-                String cep = resultSet.getString(4);
-                String numRes = resultSet.getString(5);
-                String nome = resultSet.getString(6);
-                String sobrenome = resultSet.getString(7);
+                String nome = resultSet.getString(2);
+                String sobrenome = resultSet.getString(3);
+                String cidade = resultSet.getString(4);
+                String rua = resultSet.getString(5);
+                String cep = resultSet.getString(6);
+                String numRes = resultSet.getString(7);
                 String genero = resultSet.getString(8);
                 String telefone = resultSet.getString(9);
                 String email = resultSet.getString(10);
@@ -314,12 +314,12 @@ public class ListPessoa extends javax.swing.JFrame {
             defaultTableModel.setRowCount(0);
             while (resultSet.next()){
                 String id = resultSet.getString(1);
-                String cidade = resultSet.getString(2);
-                String rua = resultSet.getString(3);
-                String cep = resultSet.getString(4);
-                String numRes = resultSet.getString(5);
-                String nome = resultSet.getString(6);
-                String sobrenome = resultSet.getString(7);
+                String nome = resultSet.getString(2);
+                String sobrenome = resultSet.getString(3);
+                String cidade = resultSet.getString(4);
+                String rua = resultSet.getString(5);
+                String cep = resultSet.getString(6);
+                String numRes = resultSet.getString(7);
                 String genero = resultSet.getString(8);
                 String telefone = resultSet.getString(9);
                 String email = resultSet.getString(10);
@@ -347,12 +347,12 @@ public class ListPessoa extends javax.swing.JFrame {
             defaultTableModel.setRowCount(0);
             while (resultSet.next()){
                 String id = resultSet.getString(1);
-                String cidade = resultSet.getString(2);
-                String rua = resultSet.getString(3);
-                String cep = resultSet.getString(4);
-                String numRes = resultSet.getString(5);
-                String nome = resultSet.getString(6);
-                String sobrenome = resultSet.getString(7);
+                String nome = resultSet.getString(2);
+                String sobrenome = resultSet.getString(3);
+                String cidade = resultSet.getString(4);
+                String rua = resultSet.getString(5);
+                String cep = resultSet.getString(6);
+                String numRes = resultSet.getString(7);
                 String genero = resultSet.getString(8);
                 String telefone = resultSet.getString(9);
                 String email = resultSet.getString(10);
@@ -380,12 +380,12 @@ public class ListPessoa extends javax.swing.JFrame {
             defaultTableModel.setRowCount(0);
             while (resultSet.next()){
                 String id = resultSet.getString(1);
-                String cidade = resultSet.getString(2);
-                String rua = resultSet.getString(3);
-                String cep = resultSet.getString(4);
-                String numRes = resultSet.getString(5);
-                String nome = resultSet.getString(6);
-                String sobrenome = resultSet.getString(7);
+                String nome = resultSet.getString(2);
+                String sobrenome = resultSet.getString(3);
+                String cidade = resultSet.getString(4);
+                String rua = resultSet.getString(5);
+                String cep = resultSet.getString(6);
+                String numRes = resultSet.getString(7);
                 String genero = resultSet.getString(8);
                 String telefone = resultSet.getString(9);
                 String email = resultSet.getString(10);
@@ -432,7 +432,7 @@ public class ListPessoa extends javax.swing.JFrame {
                 {null, null, null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "ID", "CIDADE", "RUA", "CEP", "NÚM. RESIDENCIA", "NOME", "SOBRENOME", "GENERO", "TELEFONE", "EMAIL", "ESTADO CIVIL"
+                "ID", "NOME", "SOBRENOME", "CIDADE", "RUA", "CEP", "NÚM. RESIDENCIA", "GENERO", "TELEFONE", "EMAIL", "ESTADO CIVIL"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -530,8 +530,6 @@ public class ListPessoa extends javax.swing.JFrame {
                 ModPessoa modPessoa = new ModPessoa();
 
                 modPessoa.setId(Integer.parseInt(String.valueOf(tablePessoa.getValueAt(tablePessoa.getSelectedRow(), 0))));
-//                modPessoa.setIdEndereco(Integer.parseInt(String.valueOf(tablePessoa.getValueAt(tablePessoa.getSelectedRow(), 1))));
-//                modPessoa.setIdEstadoCivil(Integer.parseInt(String.valueOf(tablePessoa.getValueAt(tablePessoa.getSelectedRow(), 2))));;;
                 modPessoa.setNome(String.valueOf(tablePessoa.getValueAt(tablePessoa.getSelectedRow(), 5)));
                 modPessoa.setSobrenome(String.valueOf(tablePessoa.getValueAt(tablePessoa.getSelectedRow(), 6)));
                 modPessoa.setGenero(String.valueOf(tablePessoa.getValueAt(tablePessoa.getSelectedRow(), 7)));
@@ -540,7 +538,7 @@ public class ListPessoa extends javax.swing.JFrame {
                 
                 //
                 DaoEndereco daoEndereco = new DaoEndereco();
-                ResultSet resultSet = daoEndereco.listarPorId(Integer.parseInt(tablePessoa.getValueAt(tablePessoa.getSelectedRow(), 0).toString()));
+                ResultSet resultSet = daoEndereco.listarPorId(Integer.parseInt(tablePessoa.getValueAt(tablePessoa.getSelectedRow(), 1).toString()));
 
                 int idEndereco = -1;
                 while(resultSet.next())

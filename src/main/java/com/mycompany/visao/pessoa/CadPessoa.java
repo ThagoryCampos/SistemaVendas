@@ -62,12 +62,13 @@ public class CadPessoa extends javax.swing.JFrame {
         
         tfId.setEnabled(false);
         
+        
         setExtendedState(MAXIMIZED_BOTH);
         
-//        tfIdEndereco.setVisible(false);
-//        tfIdEstadoCivil.setVisible(false);
-//        tfIdCidade.setVisible(false);
-//        tfIdCliente.setVisible(false);
+        tfIdEndereco.setVisible(false);
+        tfIdEstadoCivil.setVisible(false);
+        tfIdCidade.setVisible(false);
+        tfIdCliente.setVisible(false);
     }
 
     private Boolean existeDadosTemporarios(){        
@@ -162,13 +163,12 @@ public class CadPessoa extends javax.swing.JFrame {
         DaoPessoa daoPessoa = new DaoPessoa();
         DaoEndereco daoEndereco = new DaoEndereco();
         
-        if (daoPessoa.inserir(Integer.parseInt(tfId.getText()), Integer.parseInt(tfIdEndereco.getText()), Integer.parseInt(tfIdEstadoCivil.getText()), tfNome.getText(), tfSobrenome.getText(), (String) jcbGenero.getSelectedItem(), tfTelefone.getText(), tfEmail.getText())){
+        if (daoPessoa.inserir(Integer.parseInt(tfId.getText()), tfNome.getText(), tfSobrenome.getText(), Integer.parseInt(tfIdEndereco.getText()), Integer.parseInt(tfIdEstadoCivil.getText()), (String) jcbGenero.getSelectedItem(), tfTelefone.getText(), tfEmail.getText())){
             JOptionPane.showMessageDialog(null, "Pessoa salva com sucesso!");
-            
-            //tfId.setText(String.valueOf(daoPessoa.buscarProximoId()));
-            tfIdEndereco.setText(String.valueOf(daoEndereco.buscarProximoId()));
             tfNome.setText("");
             tfSobrenome.setText("");
+            //tfId.setText(String.valueOf(daoPessoa.buscarProximoId()));
+            tfIdEndereco.setText(String.valueOf(daoEndereco.buscarProximoId()));
             tfTelefone.setText("");
             tfEmail.setText("");
         }else{
@@ -203,7 +203,7 @@ public class CadPessoa extends javax.swing.JFrame {
     private void alterar(){
         DaoPessoa daoPessoa = new DaoPessoa();
         
-        if (daoPessoa.alterar(Integer.parseInt(tfId.getText()), Integer.parseInt(tfIdEndereco.getText()), Integer.parseInt(tfIdEstadoCivil.getText()), tfNome.getText(), tfSobrenome.getText(), (String) jcbGenero.getSelectedItem(), tfTelefone.getText(), tfEmail.getText())){
+        if (daoPessoa.alterar(Integer.parseInt(tfId.getText()), tfNome.getText(), tfSobrenome.getText(), Integer.parseInt(tfIdEndereco.getText()), Integer.parseInt(tfIdEstadoCivil.getText()), (String) jcbGenero.getSelectedItem(), tfTelefone.getText(), tfEmail.getText())){
             JOptionPane.showMessageDialog(null, "Pessoa alterada com sucesso!");
             
             //tfIdEndereco.setText(String.valueOf(daoEndereco.buscarProximoId()));          
@@ -626,7 +626,7 @@ public class CadPessoa extends javax.swing.JFrame {
     private void btnAcaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAcaoActionPerformed
         DaoPessoa daoPessoa = new DaoPessoa();
         
-        if(camposObrigatoriosPreenchidos(new JTextField[]{tfRua, tfCep, tfNumero, tfNome, tfSobrenome, tfTelefone, tfEmail})){
+        if(camposObrigatoriosPreenchidos(new JTextField[]{tfRua, tfNome, tfSobrenome, tfCep, tfNumero, tfTelefone, tfEmail})){
             if (btnAcao.getText() == Constantes.BTN_SALVAR_TEXT){
                 inserirEndereco();
                 inserir();

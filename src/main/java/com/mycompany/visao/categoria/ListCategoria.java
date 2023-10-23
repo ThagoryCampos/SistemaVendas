@@ -182,6 +182,7 @@ public class ListCategoria extends javax.swing.JFrame {
         jScrollPane1.setViewportView(tableCategoria);
         if (tableCategoria.getColumnModel().getColumnCount() > 0) {
             tableCategoria.getColumnModel().getColumn(0).setResizable(false);
+            tableCategoria.getColumnModel().getColumn(0).setPreferredWidth(20);
             tableCategoria.getColumnModel().getColumn(1).setResizable(false);
             tableCategoria.getColumnModel().getColumn(2).setResizable(false);
         }

@@ -10,20 +10,20 @@ package com.mycompany.modelo;
  */
 public class ModPessoa {
     private int id;
-    private int idEndereco;
-    private int idEstadoCivil;
     private String nome;
     private String sobrenome;
+    private int idEndereco;
+    private int idEstadoCivil;
     private String genero;
     private String telefone;
     private String email;
 
-    public ModPessoa(int id, int idEndereco, int idEstadoCivil, String nome, String sobrenome, String genero, String telefone, String email) {
+    public ModPessoa(int id, String nome, String sobrenome, int idEndereco, int idEstadoCivil, String genero, String telefone, String email) {
         this.id = id;
-        this.idEndereco = idEndereco;
-        this.idEstadoCivil = idEstadoCivil;
         this.nome = nome;
         this.sobrenome = sobrenome;
+        this.idEndereco = idEndereco;
+        this.idEstadoCivil = idEstadoCivil;
         this.genero = genero;
         this.telefone = telefone;
         this.email = email;
@@ -40,22 +40,6 @@ public class ModPessoa {
         this.id = id;
     }
 
-    public int getIdEndereco() {
-        return idEndereco;
-    }
-
-    public void setIdEndereco(int idEndereco) {
-        this.idEndereco = idEndereco;
-    }
-
-    public int getIdEstadoCivil() {
-        return idEstadoCivil;
-    }
-
-    public void setIdEstadoCivil(int idEstadoCivil) {
-        this.idEstadoCivil = idEstadoCivil;
-    }
-
     public String getNome() {
         return nome;
     }
@@ -70,6 +54,22 @@ public class ModPessoa {
 
     public void setSobrenome(String sobrenome) {
         this.sobrenome = sobrenome;
+    }
+
+    public int getIdEndereco() {
+        return idEndereco;
+    }
+
+    public void setIdEndereco(int idEndereco) {
+        this.idEndereco = idEndereco;
+    }
+
+    public int getIdEstadoCivil() {
+        return idEstadoCivil;
+    }
+
+    public void setIdEstadoCivil(int idEstadoCivil) {
+        this.idEstadoCivil = idEstadoCivil;
     }
 
     public String getGenero() {
@@ -98,6 +98,8 @@ public class ModPessoa {
 
     @Override
     public String toString() {
-        return "ModPessoa{" + "id=" + id + ", idEndereco=" + idEndereco + ", idEstadoCivil=" + idEstadoCivil + ", nome=" + nome + ", sobrenome=" + sobrenome + ", genero=" + genero + ", telefone=" + telefone + ", email=" + email + '}';
+        return "ModPessoa{" + "id=" + id + ", nome=" + nome + ", sobrenome=" + sobrenome + ", idEndereco=" + idEndereco + ", idEstadoCivil=" + idEstadoCivil + ", genero=" + genero + ", telefone=" + telefone + ", email=" + email + '}';
     }
+
+   
 }

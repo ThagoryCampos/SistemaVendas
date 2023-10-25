@@ -44,14 +44,14 @@ public class DaoPessoa extends BancoDeDadosMySql{
             
             setStatement(getConexao().prepareStatement(sql));
             
-            getStatement().setInt(1, id);
-            getStatement().setString(2, nome);
-            getStatement().setString(3, sobrenome);
-            getStatement().setInt(4, idEndereco);
-            getStatement().setInt(5, idEstadoCivil);
-            getStatement().setString(6, genero);
-            getStatement().setString(7, telefone);
-            getStatement().setString(8, email);
+            getStatement().setInt(8, id);
+            getStatement().setString(1, nome);
+            getStatement().setString(2, sobrenome);
+            getStatement().setInt(3, idEndereco);
+            getStatement().setInt(4, idEstadoCivil);
+            getStatement().setString(5, genero);
+            getStatement().setString(6, telefone);
+            getStatement().setString(7, email);
             
             getStatement().executeUpdate();
             

@@ -530,15 +530,15 @@ public class ListPessoa extends javax.swing.JFrame {
                 ModPessoa modPessoa = new ModPessoa();
 
                 modPessoa.setId(Integer.parseInt(String.valueOf(tablePessoa.getValueAt(tablePessoa.getSelectedRow(), 0))));
-                modPessoa.setNome(String.valueOf(tablePessoa.getValueAt(tablePessoa.getSelectedRow(), 5)));
-                modPessoa.setSobrenome(String.valueOf(tablePessoa.getValueAt(tablePessoa.getSelectedRow(), 6)));
+                modPessoa.setNome(String.valueOf(tablePessoa.getValueAt(tablePessoa.getSelectedRow(), 1)));
+                modPessoa.setSobrenome(String.valueOf(tablePessoa.getValueAt(tablePessoa.getSelectedRow(), 2)));
                 modPessoa.setGenero(String.valueOf(tablePessoa.getValueAt(tablePessoa.getSelectedRow(), 7)));
                 modPessoa.setTelefone(String.valueOf(tablePessoa.getValueAt(tablePessoa.getSelectedRow(), 8)));
                 modPessoa.setEmail(String.valueOf(tablePessoa.getValueAt(tablePessoa.getSelectedRow(), 9)));
                 
                 //
                 DaoEndereco daoEndereco = new DaoEndereco();
-                ResultSet resultSet = daoEndereco.listarPorId(Integer.parseInt(tablePessoa.getValueAt(tablePessoa.getSelectedRow(), 1).toString()));
+                ResultSet resultSet = daoEndereco.listarPorId(Integer.parseInt(tablePessoa.getValueAt(tablePessoa.getSelectedRow(), 0).toString()));
 
                 int idEndereco = -1;
                 while(resultSet.next())
@@ -561,9 +561,9 @@ public class ListPessoa extends javax.swing.JFrame {
                 //Pega os dados do endereço
                 ModEndereco modEndereco = new ModEndereco();
                 
-                modEndereco.setNomeRua(String.valueOf(tablePessoa.getValueAt(tablePessoa.getSelectedRow(), 2)));
-                modEndereco.setCep(String.valueOf(tablePessoa.getValueAt(tablePessoa.getSelectedRow(), 3)));
-                modEndereco.setNumeroResidencia(String.valueOf(tablePessoa.getValueAt(tablePessoa.getSelectedRow(), 4)));
+                modEndereco.setNomeRua(String.valueOf(tablePessoa.getValueAt(tablePessoa.getSelectedRow(), 4)));
+                modEndereco.setCep(String.valueOf(tablePessoa.getValueAt(tablePessoa.getSelectedRow(), 5)));
+                modEndereco.setNumeroResidencia(String.valueOf(tablePessoa.getValueAt(tablePessoa.getSelectedRow(), 6)));
                 //
                 
                 //

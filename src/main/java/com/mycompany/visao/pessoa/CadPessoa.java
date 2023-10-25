@@ -628,9 +628,9 @@ public class CadPessoa extends javax.swing.JFrame {
         
         if(camposObrigatoriosPreenchidos(new JTextField[]{tfRua, tfNome, tfSobrenome, tfCep, tfNumero, tfTelefone, tfEmail})){
             if (btnAcao.getText() == Constantes.BTN_SALVAR_TEXT){
-                inserirEndereco();
                 inserir();
                 inserirCliente();
+                inserirEndereco();
                 tfId.setText(String.valueOf(daoPessoa.buscarProximoId()));
             }else if (btnAcao.getText() == Constantes.BTN_ALTERAR_TEXT){            
                 alterarEndereco();

@@ -48,6 +48,7 @@ public class CadCidade extends javax.swing.JFrame {
         setLocationRelativeTo(null);
         
         tfId.setEnabled(false);
+        tfIdEstado.setVisible(false);
         
         //tfIdEstado.setVisible(false);
     }

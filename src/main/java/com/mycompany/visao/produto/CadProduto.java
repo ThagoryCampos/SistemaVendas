@@ -51,6 +51,8 @@ public class CadProduto extends javax.swing.JFrame {
         setLocationRelativeTo(null);
         
         tfId.setEnabled(false);
+        tfIdCategoria.setVisible(false);
+        tfIdMarca.setVisible(false);
         
 //        tfIdPais.setVisible(false);;
     }
@@ -147,15 +149,15 @@ public class CadProduto extends javax.swing.JFrame {
     }
     
     private void excluir(){
-        DaoEstado daoEstado = new DaoEstado();
+        DaoProduto daoProduto = new DaoProduto();
         
-        if (daoEstado.excluir(Integer.parseInt(tfId.getText()))){
-            JOptionPane.showMessageDialog(null, "Estado " + tfNome.getText() + " excluída com sucesso!");
+        if (daoProduto.excluir(Integer.parseInt(tfId.getText()))){
+            JOptionPane.showMessageDialog(null, "Produto " + tfNome.getText() + " excluída com sucesso!");
             
             tfId.setText("");
             tfNome.setText("");
         }else{
-            JOptionPane.showMessageDialog(null, "Não foi possível excluir o estado!");
+            JOptionPane.showMessageDialog(null, "Não foi possível excluir o produto!");
         }
         
         ((ListProduto) Formularios.listProduto).listarTodos();
@@ -285,6 +287,11 @@ public class CadProduto extends javax.swing.JFrame {
         });
 
         btnExcluir.setText("Excluir");
+        btnExcluir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnExcluirActionPerformed(evt);
+            }
+        });
 
         tfIdCategoria.setText("idCategoria");
 
@@ -411,6 +418,18 @@ public class CadProduto extends javax.swing.JFrame {
             alterar();
     }//GEN-LAST:event_btnAcaoActionPerformed
 
+    
+    private void btnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExcluirActionPerformed
+        int escolha = 
+                JOptionPane.showConfirmDialog(
+                        null, 
+                        "Deseja realmente excluir a marca " + tfNome.getText() + "?");
+        
+        if(escolha == JOptionPane.YES_OPTION)
+            excluir();
+    }//GEN-LAST:event_btnExcluirActionPerformed
+
+        
     /**
      * @param args the command line arguments
      */

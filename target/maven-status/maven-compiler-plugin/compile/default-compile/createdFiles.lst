@@ -129,6 +129,7 @@ com\mycompany\visao\endereco\ListEndereco$3.class
 com\mycompany\visao\outros\cliente\MenuPrincipal$2.class
 com\mycompany\visao\categoria\CadCategoria$2.class
 com\mycompany\ferramentas\BancoDeDadosMySql.class
+com\mycompany\visao\produto\CadProduto$6.class
 com\mycompany\dao\DaoMarca.class
 com\mycompany\visao\endereco\ListEndereco.class
 com\mycompany\visao\outros\corporativo\MenuPrincipal$7.class
